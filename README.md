@@ -61,28 +61,9 @@ These features capture the biological and chemical characteristics of protein se
 
 ---
 
-## Final Dataset
-- **Features**: The final dataset contains PCA-reduced features combined with integer-mapped labels.
-- **Structure**:  
-  - Features: `feature_0`, `feature_1`, ..., `feature_99`  
-  - Labels: `label`  
-- **File**: The final dataset is saved as `final_dataset.csv` for downstream training and evaluation.
-
----
-
-## Workflow Summary
-1. **Feature Engineering**: AAC, dipeptide composition, and physicochemical properties.  
-2. **Scaling**: Min-Max Scaling to normalize feature ranges.  
-3. **Dimensionality Reduction**: PCA to 100 dimensions for efficiency.  
-4. **Oversampling**: SMOTE to balance minority classes (`RNA`, `DNA`, `DRNA`).  
-5. **Undersampling**: Reduced `nonDRNA` samples to 3,000.  
-6. **Label Mapping**: Converted class labels to integers for compatibility.  
-7. **Dataset Saving**: Final dataset saved as `final_dataset.csv`.
-
----
 
 ## Project Goals
-This workflow ensures:
+
 1. **Balanced Representation**: Minority classes are well-represented for better classification performance.
 2. **Scalability**: Dimensionality reduction and undersampling make the dataset computationally efficient.
 3. **Biological Relevance**: Features capture meaningful biological and chemical properties of protein sequences.
